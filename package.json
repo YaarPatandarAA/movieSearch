@@ -1,0 +1,11 @@
+{
+  "name": "moviesearch",
+  "version": "1.0.0",
+  "description": "Basic Movie Search Webapp using OMDB API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amarjit Singh",
+  "license": "ISC"
+}
