@@ -10,7 +10,9 @@ app.get("/", function (req, res){
 });
 
 app.get("/results", function(req, res) {
-    request("http://www.omdbapi.com/?apikey=" + apiFile.api +"&s=star", function (error, response, body) {
+    var searchString = req.query.search;
+    var url = "http://www.omdbapi.com/?apikey=" + apiFile.api +"&s=" + searchString;
+    request(url, function (error, response, body) {
         if(!error && response.statusCode == 200){
             var data = JSON.parse(body);
             res.render("results", {data: data});
